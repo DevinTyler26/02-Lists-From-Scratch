@@ -18,7 +18,8 @@
   },
   "scripts": {
     "test": "jest --coverage",
-    "testWatch": "jest --coverage --watchAll"
+    "testWatch": "jest --coverage --watchAll",
+    "lint": "eslint **/.js"
   },
   "repository": {
     "type": "git",
