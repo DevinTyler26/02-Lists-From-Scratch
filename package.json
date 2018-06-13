@@ -17,9 +17,8 @@
     "jest": "^23.1.0"
   },
   "scripts": {
-    "test": "eslint . && jest --coverage",
-    "testWatch": "jest --coverage --watchAll",
-    "lint": "eslint **/.js"
+    "test": "jest --coverage",
+    "testWatch": "jest --coverage --watchAll"
   },
   "repository": {
     "type": "git",
