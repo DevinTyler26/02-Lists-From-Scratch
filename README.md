@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/DevinTyler26/02-Lists-From-Scratch.svg?branch=lab-02)](https://travis-ci.org/DevinTyler26/02-Lists-From-Scratch)
 ![cf](https://i.imgur.com/7v5ASc8.png) 02: Tools and Context
 ======
 https://travis-ci.org/JudyVue/01-TDD.svg?branch=master
