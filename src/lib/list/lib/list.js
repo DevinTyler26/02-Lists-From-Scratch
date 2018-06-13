@@ -32,7 +32,7 @@ const List = module.exports = class {
       throw new Error('Expected function');
     }
     if (!this.length) {
-      return undefined;
+      throw new Error('Empty list');
     }
     if (!acc) {
       acc = this[0]; /*eslint-disable-line*/
@@ -45,6 +45,12 @@ const List = module.exports = class {
 
   filter(cb) {
     const filtered = [];
+    if (typeof cb !== 'function') {
+      throw new Error('Expected function');
+    }
+    if (!this.length) {
+      throw new Error('list is empty');
+    }
     for (let i = 0; i < this.length; i++) {
       if (cb(this[i], i, this)) filtered.push(this[i]);
     }
@@ -52,6 +58,12 @@ const List = module.exports = class {
   }
 
   forEach(cb) {
+    if (typeof cb !== 'function') {
+      throw new Error('Expected function');
+    }
+    if (!this.length) {
+      throw new Error('list is empty');
+    }
     for (let i = 0; i < this.length; i++) {
       cb(this[i], i);
     }

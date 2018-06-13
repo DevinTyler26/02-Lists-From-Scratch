@@ -24,7 +24,7 @@ describe('this will test methods of the list class', () => {
     expect(theList.push(7, 8, 9)).toEqual(10);
   });
 
-  test('Testing Map, this should throw an err is empty', () => {
+  test('Testing Map, this should throw an err if empty', () => {
     const emptyList = new List();
     expect(() => {
       emptyList.map(e => e);
@@ -62,6 +62,20 @@ describe('this will test methods of the list class', () => {
     expect(sum).toEqual(25);
   });
 
+  test('Testing reduce, this should throw an err if empty', () => {
+    const emptyList = new List();
+    expect(() => {
+      emptyList.reduce(e => e);
+    }).toThrow();
+  });
+
+  test('Testing reduce, this should throw an err if a function in put in', () => {
+    const emptyList = new List();
+    expect(() => {
+      emptyList.reduce('not a function');
+    }).toThrow();
+  });
+
   test('Testing filter, this should filter out elm that are below 3', () => {
     const newList = theList.filter((item) => {
       return item > 3;
@@ -69,10 +83,37 @@ describe('this will test methods of the list class', () => {
     expect(newList.length).toEqual(2); /*eslint-disable-line*/
   });
 
+  test('Testing filter, this should throw an err if empty', () => {
+    const emptyList = new List();
+    expect(() => {
+      emptyList.filter(e => e);
+    }).toThrow();
+  });
+
+  test('Testing filter, this should throw an err if a function in put in', () => {
+    const emptyList = new List();
+    expect(() => {
+      emptyList.filter('not a function');
+    }).toThrow();
+  });
+
   test('Testing forEach, this should add 3 to each elm in array', () => {
     const newList = [0, 1, 2, 3, 4, 5];
-    theList.forEach((item, index) => {
-      expect(theList[index]).toEqual(newList[index]);
+    theList.forEach((item, i) => {
+      expect(theList[i]).toEqual(newList[i]);
     });
+  });
+  test('Testing forEach, this should throw an err if empty', () => {
+    const emptyList = new List();
+    expect(() => {
+      emptyList.forEach(e => e);
+    }).toThrow();
+  });
+
+  test('Testing forEach, this should throw an err if a function in put in', () => {
+    const emptyList = new List();
+    expect(() => {
+      emptyList.forEach('not a function');
+    }).toThrow();
   });
 });
