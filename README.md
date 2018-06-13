@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/DevinTyler26/02-Lists-From-Scratch.svg?branch=lab-02)](https://travis-ci.org/DevinTyler26/02-Lists-From-Scratch)
 ![cf](https://i.imgur.com/7v5ASc8.png) 02: Tools and Context
 ======
 https://travis-ci.org/JudyVue/01-TDD.svg?branch=master
@@ -45,5 +46,8 @@ Each `it` callback should aim to test a small, well defined, feature of a functi
   * tests to ensure that the list module functions return the correct results when invoked with valid arguments
 
 ##  Documentation
-Include your travis badge at the top of your `README.md` file
-In your `README.md`, describe the exported values of each module you have defined. Every function description should include it's airty (expected number of parameters), the expected data for each parameter (data-type and limitations), and it's behavior (for both valid and invalid use). Feel free to add any additional information in your `README.md` that you would like.
+push will push new elements into an array
+forEach will take an array and apply a function to it ie console.log will console log each element individually
+map will take each element and apply a function to each element and return the modified array
+filter will filter out elements from an array if they do not fit a certain criteria
+reduce will take all the elements in an array and reduce them down to 1 value ie [1,2,3,4,5] will be [15]
